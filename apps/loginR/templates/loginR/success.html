@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h4> Hello, {{ user.name }} </h4>
+    
+    <a href="/logout">Logout</a>
+
+    <h3>Your Trip Schedules:</h3>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th> 
+            <th>Plan</th>
+        </tr>
+        <tr>
+            <td>{{user.destination}}</td>
+            <td>{{user.departdate}}</td>
+            <td>{{user.until}}</td>
+            <td>{{user.description}}</td>
+        </tr>
+    </table>
+
+    <h3>Other User's Travel Plans:</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th> 
+            <th>Do you want to join?</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <a href="{% url "add" %}">Add Travel Plan</a>
+    </body>
+</html>
